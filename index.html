@@ -13,6 +13,7 @@
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
+  <!-- <script src="./assets/js/index.js"></script> -->
 </head>
 <body>
   <nav>
@@ -24,8 +25,23 @@
       <li>Trending</li>
       <li>Categories</li>
     </ul>
-    <svg class="icon-menu" width="40" height="17" xmlns="http://www.w3.org/2000/svg"><g fill="#00001A" fill-rule="evenodd"><path d="M0 0h40v3H0zM0 7h40v3H0zM0 14h40v3H0z"/><path d="M0 0h40v3H0z"/></g></svg>
-   </nav>
+    <div id="mySidenav" class="sidenav">
+      <div class="closeBtn" onclick="closeNav()">
+        <svg width="32" height="31" xmlns="http://www.w3.org/2000/svg"><g fill="#00001A" fill-rule="evenodd"><path d="m2.919.297 28.284 28.284-2.122 2.122L.797 2.419z"/><path d="M.797 28.581 29.081.297l2.122 2.122L2.919 30.703z"/></g></svg>
+      </div>
+     
+      <ul>
+        <li>Home </li>
+        <li> New </li>
+        <li> Popular </li>
+        <li> Trending </li>
+        <li> Categories </li>
+      </ul>
+    </div>
+		<div id="menu-id" class="menu-icon" onclick="openNav()">
+      <svg width="60" height="47" xmlns="http://www.w3.org/2000/svg"><g fill="#00001A" fill-rule="evenodd"><path d="M0 0h40v3H0zM0 7h40v3H0zM0 14h40v3H0z"/><path d="M0 0h40v3H0z"/></g></svg>
+    </div>
+</nav>
   <main>
     <div class="image1">
       <div class="grid1">
@@ -100,13 +116,24 @@
         <p>How the pandemic has sparked fresh opportunities.
         </p>
        </div>
-  
       </div>
     </div>
   </section>  
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Megashree</a>.
+    Coded by  Megashree</a>.
   </div>
+  <script>
+  function openNav(){
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("menu-id").style.visibility = "hidden";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav(){
+    document.getElementById("mySidenav").style.width = "0px";
+    document.getElementById("menu-id").style.visibility = "visible";
+    document.body.style.backgroundColor = "hsl(36, 100%, 99%)";
+}</script>
 </body>
 </html>
